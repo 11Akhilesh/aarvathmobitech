@@ -70,7 +70,7 @@ const NavBar = () => {
       {/* Desktop Navigation (Always Visible) */}
       <HStack spacing={9} display={{ base: "none", md: "flex" }}>  
         <ChakraLink as={RouterLink} to="/" fontWeight="500" letterSpacing="widest" fontSize="14px">Home</ChakraLink>
-        <ChakraLink as={RouterLink} to="/achievements" fontWeight="500" letterSpacing="widest" fontSize="14px">About Us</ChakraLink> 
+        <ChakraLink as={RouterLink} to="/about" fontWeight="500" letterSpacing="widest" fontSize="14px">About Us</ChakraLink> 
         <ChakraLink as={RouterLink} to="/achievements" fontWeight="500" letterSpacing="widest" fontSize="14px">Achievements</ChakraLink>
         <ChakraLink href="#footer" onClick={handleScrollToFooter} fontWeight="500" letterSpacing="widest" fontSize="14px">
           Contact Us
@@ -94,7 +94,7 @@ const NavBar = () => {
           <DrawerCloseButton />
           <VStack spacing={6} mt="100px">  
             <ChakraLink as={RouterLink} to="/" onClick={onClose} fontSize="18px">Home</ChakraLink>
-            <ChakraLink as={RouterLink} to="/achievements" onClick={onClose} fontSize="18px">About Us</ChakraLink> 
+            <ChakraLink as={RouterLink} to="/about" onClick={onClose} fontSize="18px">About Us</ChakraLink> 
             <ChakraLink as={RouterLink} to="/achievements" onClick={onClose} fontSize="18px">Achievements</ChakraLink>
             <ChakraLink href="#footer" onClick={(e) => { onClose(); handleScrollToFooter(e); }} fontSize="18px">
               Contact Us

@@ -9,9 +9,7 @@ const Footer = () => {
         <HStack spacing={12} align="start" justify="space-between">
           {/* Logo */}
           <VStack align="start" spacing={2}>
-            <Image src="/logo.png" alt="AARVATH Logo" boxSize="150px" width="210px" />
-            <Heading as="h2" size="lg">AARVATH</Heading>
-            <Text fontSize="sm">MOBITECH PVT. LTD</Text>
+            <Image src="/footerlogo.jpg" alt="AARVATH Logo" boxSize="290px" width="290px" />
           </VStack>
 
           {/* About Us */}

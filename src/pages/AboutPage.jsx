@@ -1,70 +1,62 @@
 import React from 'react';
-import { Box, Container, Heading, Text, SimpleGrid, Image, VStack } from '@chakra-ui/react';
-import Hero from '../components/Hero';
-
-// Replace with your actual image path
-const aboutImage = "/placeholder-about.jpg";
+import { Box, Container, Heading, Text, VStack } from '@chakra-ui/react';
+import Footer from '../components/Footer';
 
 function AboutPage() {
   return (
-    <Box pt="64px">
-      <Hero 
-        title="ABOUT US" 
-        subtitle="Learn our story" 
-        image={aboutImage}
-        showComingSoon={false}
-      />
-      
-      <Container maxW="container.xl" py={16}>
-        <VStack spacing={10} align="stretch">
-          <Box>
-            <Heading as="h2" size="xl" mb={6}>Our Mission</Heading>
-            <Text fontSize="lg">
-              At Aarvath Mobitech, we are committed to revolutionizing transportation 
-              with sustainable, solar-powered vehicles. Our mission is to reduce carbon 
-              footprints while providing efficient and accessible mobility solutions.
+    <Box pt="64px" display="flex" flexDirection="column" minHeight="100vh">
+      <Container maxW="98vw" py={16} flex="1">
+        <VStack spacing={5} align="stretch">
+          {/* Our Journey Section */}
+          <Box textAlign="center">
+            <Heading as="h2" size="xl" color="#E63946" mb={6} letterSpacing="widest">
+              Our Journey
+            </Heading>
+          </Box>
+
+          <Box bg="white" color="black" p={6} borderRadius="lg" boxShadow="md">
+            <Text fontSize="lg" textAlign="justify">
+              Our journey began when the co-founders embarked on the idea of creating a Solar Powered Vehicle. 
+              To refine our concept, we conducted field visits, attended relevant events, and participated in conferences, 
+              with the support of mentors and resources from our college.
+            </Text>
+            <Text fontSize="lg" textAlign="justify" mt={4}>
+              Despite facing numerous challenges, we persevered. We joined an incubation program, 
+              and with a growing team and access to valuable resources, significant improvements were made. 
+              A real-time customer, a farmer, had a test run on our prototype. 
+              We managed to address all inconsistencies and scale up our prototype.
+            </Text>
+            <Text fontSize="lg" textAlign="justify" mt={4}>
+              We have been diligently working on our prototype for the past 1.3 years, 
+              continually improving and refining it to ensure its success in the market. 
+              The designing and simulation process is still in progress.
             </Text>
           </Box>
-          
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-            <Box>
-              <Heading as="h3" size="lg" mb={4}>Our Vision</Heading>
-              <Text fontSize="md">
-                We envision a world where clean energy powers all forms of transportation, 
-                making our planet healthier and more sustainable for future generations.
-              </Text>
-            </Box>
-            <Box>
-              <Heading as="h3" size="lg" mb={4}>Our Approach</Heading>
-              <Text fontSize="md">
-                We combine cutting-edge solar technology with innovative vehicle design 
-                to create solutions that are both environmentally friendly and practical 
-                for everyday use.
-              </Text>
-            </Box>
-          </SimpleGrid>
-          
-          <Box>
-            <Heading as="h2" size="xl" mb={6}>Our Team</Heading>
-            <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing={8}>
-              {/* Team member cards - replace with actual data */}
-              <Box textAlign="center">
-                <Image src="/api/placeholder/300/300" borderRadius="full" alt="Team Member" mx="auto" />
-                <Heading as="h4" size="md" mt={4}>John Doe</Heading>
-                <Text>Founder & CEO</Text>
-              </Box>
-              <Box textAlign="center">
-                <Image src="/api/placeholder/300/300" borderRadius="full" alt="Team Member" mx="auto" />
-                <Heading as="h4" size="md" mt={4}>Jane Smith</Heading>
-                <Text>Chief Technology Officer</Text>
-              </Box>
-              <Box textAlign="center">
-                <Image src="/api/placeholder/300/300" borderRadius="full" alt="Team Member" mx="auto" />
-                <Heading as="h4" size="md" mt={4}>Alex Johnson</Heading>
-                <Text>Lead Engineer</Text>
-              </Box>
-            </SimpleGrid>
+
+          {/* Our Team Section */}
+          <Box textAlign="center">
+            <Heading as="h2" size="xl" color="#E63946" mb={6} letterSpacing="widest">
+              Our Team
+            </Heading>
           </Box>
+
+          <Box bg="white" color="black" p={6} borderRadius="lg" boxShadow="md">
+            <VStack spacing={6}>
+              <Box>
+                <Heading as="h4" size="md" color="#E63946" mb={1} letterSpacing="widest">
+                  Shreesha Shetty
+                </Heading>
+                <Text fontSize="lg">Co-Founder</Text>
+              </Box>
+              <Box>
+                <Heading as="h4" size="md" color="#E63946" mb={1} letterSpacing="widest">
+                  Apoorva Achar
+                </Heading>
+                <Text fontSize="lg">Co-Founder</Text>
+              </Box>
+            </VStack>
+          </Box>
+
         </VStack>
       </Container>
     </Box>

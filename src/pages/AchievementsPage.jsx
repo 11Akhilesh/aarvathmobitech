@@ -4,21 +4,6 @@ import { Box, Heading, Text, VStack } from '@chakra-ui/react';
 function AchievementsPage() {
   return (
     <Box pt="64px" bg="black" color="white">
-      
-      {/* Our Story Section */}
-      <VStack spacing={6} align="center"> {/* Centered Content */}
-        <Box textAlign="center">
-          <Heading as="h2" size="xl" color="#E63946" letterSpacing="widest">
-            Our Story
-          </Heading>
-        </Box>
-        <Box bg="white" color="black" p={6} borderRadius="lg" w="100%" maxW="98vw"> 
-          <Text letterSpacing="widest">
-            Our journey began with a vision to revolutionize the transportation industry. Through dedication and innovation, we have developed cutting-edge solar-powered vehicles that contribute to a sustainable future. From our humble beginnings, we have grown into a leader in solar technology, continually pushing the boundaries to provide eco-friendly transportation solutions.
-          </Text>
-        </Box>
-      </VStack>
-
       {/* Our Achievements Section */}
       <VStack spacing={6} align="center" mt={16}> {/* Centered Content */}
         <Box textAlign="center">

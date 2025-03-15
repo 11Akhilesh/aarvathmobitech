@@ -18,7 +18,6 @@ const HomePage = () => {
         image={solarBikeImage}
       />
       <VisionMission /> {/* ✅ Added the Vision & Mission section */}
-      <Footer />
     </Box>
   );
 }
