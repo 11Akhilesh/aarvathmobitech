@@ -69,22 +69,62 @@ const NavBar = () => {
 
       {/* Desktop Navigation (Always Visible) */}
       <HStack spacing={9} display={{ base: "none", md: "flex" }}>  
-        <ChakraLink as={RouterLink} to="/" fontWeight="500" letterSpacing="widest" fontSize="14px">Home</ChakraLink>
-        <ChakraLink as={RouterLink} to="/about" fontWeight="500" letterSpacing="widest" fontSize="14px">About Us</ChakraLink> 
-        <ChakraLink as={RouterLink} to="/achievements" fontWeight="500" letterSpacing="widest" fontSize="14px">Achievements</ChakraLink>
-        <ChakraLink href="#footer" onClick={handleScrollToFooter} fontWeight="500" letterSpacing="widest" fontSize="14px">
+        <ChakraLink 
+          as={RouterLink} 
+          to="/" 
+          fontWeight="500" 
+          letterSpacing="widest" 
+          fontSize="14px"
+          transition="all 0.3s ease-in-out"
+          _hover={{ color: "gray.400", transform: "scale(1.1)" }}
+        >
+          Home
+        </ChakraLink>
+        <ChakraLink 
+          as={RouterLink} 
+          to="/about" 
+          fontWeight="500" 
+          letterSpacing="widest" 
+          fontSize="14px"
+          transition="all 0.3s ease-in-out"
+          _hover={{ color: "gray.400", transform: "scale(1.1)" }}
+        >
+          About Us
+        </ChakraLink> 
+        <ChakraLink 
+          as={RouterLink} 
+          to="/achievements" 
+          fontWeight="500" 
+          letterSpacing="widest" 
+          fontSize="14px"
+          transition="all 0.3s ease-in-out"
+          _hover={{ color: "gray.400", transform: "scale(1.1)" }}
+        >
+          Achievements
+        </ChakraLink>
+        <ChakraLink 
+          href="#footer" 
+          onClick={handleScrollToFooter} 
+          fontWeight="500" 
+          letterSpacing="widest" 
+          fontSize="14px"
+          transition="all 0.3s ease-in-out"
+          _hover={{ color: "gray.400", transform: "scale(1.1)" }}
+        >
           Contact Us
         </ChakraLink>
       </HStack>
 
       {/* Hamburger Button (Only Visible on Mobile) */}
       <IconButton 
-        display={{ base: "flex", md: "none" }}  // ✅ Visible only on small screens
+        display={{ base: "flex", md: "none" }}  
         icon={<HamburgerIcon />} 
         variant="ghost" 
         aria-label="Open Menu" 
         onClick={onOpen} 
         color="white"
+        transition="all 0.3s ease-in-out"
+        _hover={{ transform: "scale(1.2)", color: "gray.400" }}
       />
 
       {/* Mobile Menu (Drawer) */}
@@ -93,10 +133,43 @@ const NavBar = () => {
         <DrawerContent bg="black" color="white">
           <DrawerCloseButton />
           <VStack spacing={6} mt="100px">  
-            <ChakraLink as={RouterLink} to="/" onClick={onClose} fontSize="18px">Home</ChakraLink>
-            <ChakraLink as={RouterLink} to="/about" onClick={onClose} fontSize="18px">About Us</ChakraLink> 
-            <ChakraLink as={RouterLink} to="/achievements" onClick={onClose} fontSize="18px">Achievements</ChakraLink>
-            <ChakraLink href="#footer" onClick={(e) => { onClose(); handleScrollToFooter(e); }} fontSize="18px">
+            <ChakraLink 
+              as={RouterLink} 
+              to="/" 
+              onClick={onClose} 
+              fontSize="18px"
+              transition="all 0.3s ease-in-out"
+              _hover={{ color: "gray.400", transform: "scale(1.1)" }}
+            >
+              Home
+            </ChakraLink>
+            <ChakraLink 
+              as={RouterLink} 
+              to="/about" 
+              onClick={onClose} 
+              fontSize="18px"
+              transition="all 0.3s ease-in-out"
+              _hover={{ color: "gray.400", transform: "scale(1.1)" }}
+            >
+              About Us
+            </ChakraLink> 
+            <ChakraLink 
+              as={RouterLink} 
+              to="/achievements" 
+              onClick={onClose} 
+              fontSize="18px"
+              transition="all 0.3s ease-in-out"
+              _hover={{ color: "gray.400", transform: "scale(1.1)" }}
+            >
+              Achievements
+            </ChakraLink>
+            <ChakraLink 
+              href="#footer" 
+              onClick={(e) => { onClose(); handleScrollToFooter(e); }} 
+              fontSize="18px"
+              transition="all 0.3s ease-in-out"
+              _hover={{ color: "gray.400", transform: "scale(1.1)" }}
+            >
               Contact Us
             </ChakraLink>
           </VStack>

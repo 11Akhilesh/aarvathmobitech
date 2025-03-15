@@ -19,7 +19,7 @@ const Hero = () => {
       w="100vw"
       bgImage={`url(${backgroundImage})`}
       bgSize="cover" // ✅ Ensures full coverage without horizontal scrolling
-      bgPosition="center"
+      bgPosition="center10%"
       bgRepeat="no-repeat"
       display="flex"
       alignItems="center"
