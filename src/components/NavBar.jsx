@@ -117,7 +117,7 @@ const NavBar = () => {
 
       {/* Hamburger Button (Only Visible on Mobile) */}
       <IconButton 
-        display={{ base: "flex", md: "none" }}  
+        display={{ base: "flex", md: "none" }} justifyContent="flex-end" w="100%"  
         icon={<HamburgerIcon />} 
         variant="ghost" 
         aria-label="Open Menu" 

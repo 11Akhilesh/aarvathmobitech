@@ -3,16 +3,16 @@ import { Box, Heading, Text, Image, Flex, List, ListItem, ListIcon } from "@chak
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
 // Image path
-const visionMissionImage = "/solarcycle.jpg"; // Ensure the image is in /public or adjust the import path if necessary
+const visionMissionImage = "/solarcycle.jpg"; // Ensure the image is in /public folder
 
 const VisionMission = () => {
   return (
-    <Box bg="black" color="white" py={{ base: 10, md: 16 }} px={{ base: 4, md: 12 }} textAlign="center">
+    <Box bg="black" color="white" py={{ base: 12, md: 16 }} px={{ base: 6, md: 12 }} textAlign="center">
       {/* Title */}
       <Heading
         as="h1"
-        fontSize={{ base: "2xl", md: "4xl" }} // ✅ Adjusted font size for responsiveness
-        mb={10}
+        fontSize={{ base: "2xl", md: "4xl" }}
+        mb={8}
         letterSpacing="widest"
         fontFamily="monospace"
       >
@@ -24,24 +24,25 @@ const VisionMission = () => {
         direction={{ base: "column", md: "row" }}
         align="center"
         justify="center"
-        maxW="90%"
+        maxW="100%"
         mx="auto"
         flexWrap="wrap"
+        gap={{ base: 6, md: 12 }} // ✅ Adds proper spacing in all screens
       >
-        {/* Image - Increased width */}
+        {/* Image - Improved for all screens */}
         <Image
           src={visionMissionImage}
           alt="Solar Bike"
-          width={{ base: "100%", md: "50%" }} // ✅ Responsive width
-          height="auto"
+          flex={{ base: "none", md: "1" }} // ✅ Scales well on all screens
+          width={{ base: "100%", md: "45%", lg: "40%" }} // ✅ Prevents oversizing
+          maxW="500px" // ✅ Keeps image within reasonable size
           objectFit="cover"
-          mb={{ base: 6, md: 0 }}
         />
 
         {/* Vision & Mission Text */}
-        <Box textAlign="left" ml={{ md: 10 }} maxW="500px">
+        <Box textAlign="left" maxW="600px" flex="1"> {/* ✅ Text scales well */}
           {/* Vision */}
-          <Text fontSize={{ base: "2xl", md: "3xl" }} color="red.500" fontWeight="bold" mb={2} textAlign="center">
+          <Text fontSize={{ base: "2xl", md: "3xl" }} color="red.500" fontWeight="bold" mb={3} textAlign="center">
             Vision
           </Text>
           <List spacing={3} fontSize={{ base: "md", md: "lg" }} fontFamily="monospace">
@@ -52,7 +53,7 @@ const VisionMission = () => {
           </List>
 
           {/* Mission */}
-          <Text fontSize={{ base: "2xl", md: "3xl" }} color="red.500" fontWeight="bold" mt={6} mb={2} textAlign="center">
+          <Text fontSize={{ base: "2xl", md: "3xl" }} color="red.500" fontWeight="bold" mt={6} mb={3} textAlign="center">
             Mission
           </Text>
           <List spacing={3} fontSize={{ base: "md", md: "lg" }} fontFamily="monospace">

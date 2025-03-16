@@ -33,7 +33,8 @@ const Hero = () => {
           borderRadius="8px"
           maxWidth={{ base: "100%", md: "50%" }} // ✅ Adjusts box width on small screens
           animation={`${slideIn} 1s ease-out`}
-          ml={-40}
+          ml={{ base: -10, lg: -40 }}
+          mt={{ base: "50vh", md: "60vh" }} // ✅ Moves text lower
           textAlign={{ base: "center", md: "left" }} // ✅ Centers text on mobile
         >
           <Heading as="h1" size={{ base: "xl", md: "2xl" }} fontWeight="bold" color="white">

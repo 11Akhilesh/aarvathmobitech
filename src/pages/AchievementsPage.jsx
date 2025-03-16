@@ -17,7 +17,7 @@ function AchievementsPage() {
           <Heading as="h3" size="md" color="#E63946" letterSpacing="widest">
             Achievement 1: 5 Lakhs Seed Funding by Cisco Thingqbator
           </Heading>
-          <Text mt={2} letterSpacing="widest">
+          <Text mt={2} letterSpacing="widest" align="justify">
             We secured a significant milestone with a seed funding of 5 Lakhs from Cisco Thingqbator. This funding has been instrumental in accelerating our research and development efforts, allowing us to innovate and expand our capabilities in solar-powered transportation solutions. We are grateful for Cisco Thingqbator's support and are committed to leveraging these resources to drive our mission forward.
           </Text>
         </Box>
@@ -27,7 +27,7 @@ function AchievementsPage() {
           <Heading as="h3" size="md" color="#E63946" letterSpacing="widest">
             Achievement 2: Top 10 in Manthan 2022-23
           </Heading>
-          <Text mt={2} letterSpacing="widest">
+          <Text mt={2} letterSpacing="widest" align="justify">
             We proudly secured a position in the Top 10 at Manthan 2022-23, a prestigious innovation and entrepreneurship competition conducted by the Government of Karnataka. This recognition underscores our commitment to excellence and innovation in the field of solar-powered transportation. Being among the top contenders has fueled our drive to continue pushing boundaries and delivering impactful solutions.
           </Text>
         </Box>
@@ -37,7 +37,7 @@ function AchievementsPage() {
           <Heading as="h3" size="md" color="#E63946" letterSpacing="widest">
             Achievement 3: 1st in I2CONECT hosted by IEEE
           </Heading>
-          <Text mt={2} letterSpacing="widest">
+          <Text mt={2} letterSpacing="widest" align="justify">
             We achieved 1st place in the I2CONECT competition, hosted by IEEE, and were awarded a cash prize of 5,000/-. This victory highlights our innovative approach and technical excellence in the field of solar-powered transportation, showcasing our ability to lead and excel in competitive environments.
           </Text>
         </Box>
