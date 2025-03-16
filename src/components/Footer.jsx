@@ -42,12 +42,21 @@ const Footer = () => {
   };
 
   return (
-    <Box id="footer" bg="black" color="white" py={8} px={6}>
+    <Box id="footer" bg="black" color="white" py={{ base: 6, md: 8 }} px={{ base: 4, md: 6 }}>
       <Container maxW="container.xl">
-        <Stack spacing={8} align="start" justify="space-between" direction={{ base: "column", md: "row" }}>
-          {/* Logo */}
-          <VStack align="start" spacing={2}>
-            <Image src="/footerlogo.jpg" alt="AARVATH Logo" boxSize={{ base: "200px", md: "290px" }} width="auto" />
+        <Stack
+          spacing={{ base: 8, md: 8 }}
+          direction={{ base: "column", lg: "row" }}
+          justify="space-between"
+          align={{ base: "center", lg: "start" }}
+        >
+          <VStack align={{ base: "center", lg: "start" }} spacing={2}>
+            <Image
+              src="/footerlogo.jpg"
+              alt="AARVATH Logo"
+              boxSize={{ base: "150px", md: "200px" }}
+              w="auto"
+            />
           </VStack>
 
           {/* About Us */}
@@ -67,21 +76,55 @@ const Footer = () => {
           </VStack>
 
           {/* Contact Form */}
-          <VStack as="form" onSubmit={sendEmail} align="start" spacing={2} w={{ base: "100%", md: "300px" }}>
-            <Heading as="h3" size="lg" color="#f5deb3">Contact Us</Heading>
+          <VStack 
+            as="form" 
+            onSubmit={sendEmail}
+            align={{ base: "center", lg: "start" }}
+            spacing={2} 
+            w={{ base: "90%", sm: "80%", md: "300px" }}
+          >
+            <Heading as="h3" size={{ base: "md", md: "lg" }} color="#f5deb3">
+              Contact Us
+            </Heading>
             <Text fontSize="sm">Name:</Text>
-            <Input bg="white" color="black" size="sm" name="name" value={formData.name} onChange={handleChange} required />
+            <Input 
+              bg="white" 
+              color="black" 
+              size={{ base: "sm", md: "md" }}
+              name="name" 
+              value={formData.name} 
+              onChange={handleChange} 
+              required 
+            />
             <Text fontSize="sm">Email:</Text>
-            <Input bg="white" color="black" size="sm" name="email" value={formData.email} onChange={handleChange} required />
+            <Input 
+              bg="white" 
+              color="black" 
+              size={{ base: "sm", md: "md" }}
+              name="email" 
+              value={formData.email} 
+              onChange={handleChange} 
+              required 
+            />
             <Text fontSize="sm">Message:</Text>
-            <Textarea bg="white" color="black" size="sm" name="message" value={formData.message} onChange={handleChange} required />
+            <Textarea 
+              bg="white" 
+              color="black" 
+              size={{ base: "sm", md: "md" }}
+              name="message" 
+              value={formData.message} 
+              onChange={handleChange} 
+              required 
+            />
             <Button type="submit" bg="goldenrod" color="black" w="full">Submit</Button>
           </VStack>
         </Stack>
 
-        {/* Divider & Copyright Text */}
-        <Divider my={6} borderColor="gray.600" />
-        <Text textAlign="center" fontSize="sm" color="gray.400">
+        <Divider my={{ base: 4, md: 6 }} />
+        <Text 
+          textAlign="center" 
+          fontSize={{ base: "xs", md: "sm" }}
+        >
           © 2024 Aarvath Mobitech Pvt Ltd. All rights reserved.
         </Text>
       </Container>

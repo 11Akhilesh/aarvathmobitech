@@ -14,8 +14,8 @@ function AboutPage() {
 
         <Box 
           bg="white" 
-          color="black" 
-          p={6} 
+          color="black"
+          p={{ base: 4, md: 6 }} 
           borderRadius="lg" 
           boxShadow="md" 
           w="92%" 

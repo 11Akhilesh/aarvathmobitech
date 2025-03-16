@@ -15,32 +15,39 @@ const Hero = () => {
   return (
     <Box
       position="relative"
-      minH="100vh"
-      w="100vw"
+      minH={{ base: "80vh", md: "100vh" }}
+      w="100%"
       bgImage={`url(${backgroundImage})`}
-      bgSize="cover" // ✅ Ensures full coverage without horizontal scrolling
-      bgPosition="center10%"
+      bgSize="cover"
+      bgPosition={{ base: "center", md: "center 10%" }}
       bgRepeat="no-repeat"
       display="flex"
       alignItems="center"
-      px={{ base: 4, md: 8, lg: 16 }} // ✅ Adds padding on smaller screens
+      px={{ base: 2, md: 8 }}
     >
-      {/* Content */}
       <Container maxW="container.xl">
         <Box
           bg="rgba(0, 0, 0, 0.7)"
-          padding={{ base: "1rem", md: "1.5rem 2rem" }} // ✅ Responsive padding
+          p={{ base: 4, md: 6 }}
           borderRadius="8px"
-          maxWidth={{ base: "100%", md: "50%" }} // ✅ Adjusts box width on small screens
-          animation={`${slideIn} 1s ease-out`}
-          ml={{ base: -10, lg: -40 }}
-          mt={{ base: "50vh", md: "60vh" }} // ✅ Moves text lower
-          textAlign={{ base: "center", md: "left" }} // ✅ Centers text on mobile
+          maxW={{ base: "95%", md: "50%" }}
+          mx={{ base: "auto", md: 0 }}
+          mt={{ base: "40vh", md: "60vh" }}
+          textAlign={{ base: "center", md: "left" }}
         >
-          <Heading as="h1" size={{ base: "xl", md: "2xl" }} fontWeight="bold" color="white">
+          <Heading 
+            as="h1" 
+            fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
+            fontWeight="bold"
+            color="white"
+          >
             AARVATH MOBITECH
           </Heading>
-          <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="medium" color="white">
+          <Text 
+            fontSize={{ base: "md", sm: "lg", md: "xl" }}
+            fontWeight="medium"
+            color="white"
+          >
             Solar Powered Vehicles
           </Text>
         </Box>
