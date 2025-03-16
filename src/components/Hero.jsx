@@ -30,8 +30,8 @@ const Hero = () => {
           bg="rgba(0, 0, 0, 0.7)"
           p={{ base: 4, md: 6 }}
           borderRadius="8px"
-          maxW={{ base: "95%", md: "50%" }}
-          mx={{ base: "auto", md: 0 }}
+          maxW={{ base: "95%", md: "38%" }}
+          mx={{ base: "auto", md: "-20vh" }}
           mt={{ base: "40vh", md: "60vh" }}
           textAlign={{ base: "center", md: "left" }}
         >
